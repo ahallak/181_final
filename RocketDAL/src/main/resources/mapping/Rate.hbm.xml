@@ -3,15 +3,15 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Nov 13, 2014 2:49:57 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
- <class name="rocketDomain.RateDomainModel" table="tblRate">
-  <id name="iRateID" type="integer">
-   <column name="RateID"/>
-  </id>
-  <property generated="never" lazy="false" name="iMinCreditScore" type="integer">
-   <column length="3" name="MinCreditScore" not-null="true" precision="0"/>
-  </property>
-  <property generated="never" lazy="false" name="dInterestRate" type="double">
-   <column length="5" name="INTERESTRATE" not-null="true" precision="4"/>
-  </property>
- </class>
+	<class name="rocketDomain.RateDomainModel" table="tblRate">
+		<id name="iRateID" type="integer">
+			<column name="RateID" />
+		</id>
+		<property name="iMinCreditScore" type="integer">
+			<column name="MinCreditScore" length="3" />
+		</property>
+		<property name="dInterestRate" type="double">
+			<column name="INTERESTRATE" length="5" precision="4" />
+		</property>
+	</class>
 </hibernate-mapping>

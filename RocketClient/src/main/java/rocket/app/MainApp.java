@@ -43,7 +43,7 @@ public class MainApp extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
+	
 	@Override
 	public void init() throws Exception {
 		StartHubAndClient();
@@ -51,27 +51,22 @@ public class MainApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		
 		// START is executed by the Application framework after INIT
 		AnchorPane root = new AnchorPane();
 		Scene scene = new Scene(root, 1300, 500);
-
 		this.primaryStage = primaryStage;
-		
+		this.primaryStage.setTitle("Rocket");
+		this.primaryStage.setScene(scene);
+		this.primaryStage.show();
+		showRocketMenu();
+			/*
 		Screen screen = Screen.getPrimary();
 		Rectangle2D bounds = screen.getVisualBounds();
-
 		primaryStage.setX(bounds.getMinX());
 		primaryStage.setY(bounds.getMinY());
 		primaryStage.setWidth(bounds.getWidth());
 		primaryStage.setHeight(bounds.getHeight());
-		
-		this.primaryStage.setTitle("Rocket");
-		this.primaryStage.setScene(scene);
-		this.primaryStage.show();
-		
-		showRocketMenu();
-		
+		*/
 	}
 	
 	public void StartHubAndClient()

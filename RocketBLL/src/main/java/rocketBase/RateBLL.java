@@ -22,9 +22,10 @@ public class RateBLL {
 		double rateDouble = -1;
 		RateDomainModel rdmRt = null;
 		for (RateDomainModel rate : listRates) {
-			if (rate.getiMinCreditScore() == GivenCreditScore) {
+			if (rate.getiMinCreditScore() <= GivenCreditScore) {
 				rateDouble = rate.getdInterestRate();
 				rdmRt = rate;
+				break;
 			}
 		}
 
